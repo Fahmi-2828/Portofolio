@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Index Page</title>
+<style>
+body {
+font-family: Arial, sans-serif;
+background-color: #f4f4f4;
+margin: 0;
+padding: 0;
+display: flex;
+flex-direction: row;
+min-height: 100vh;
+}
+nav, footer, aside {
+background-color: #333;
+color: #fff;
+padding: 10px 0;
+}
+nav a, aside a {
+color: red ;
+padding: 10px 20px;
+text-decoration: none;
+font-weight: bold;
+}
+nav a:hover, aside a:hover {
+background-color: #555;
+}
+h1 {
+color: #333;
+text-align: center;
+padding: 20px;
+}
+p {
+color: #666;
+text-align: center;
+padding: 1em;
+}
+.content {
+flex: 1;
+display: flex;
+flex-direction: column;
+margin-left: 0px;
+transition: margin-left 0.5s;
+}
+aside {
+width: 0;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+height: 100vh;
+position: fixed;
+overflow: hidden;
+transition: width 0.5s;
+}
+footer {
+padding: 10px;
+text-align: center;
+position: fixed;
+bottom: 0;
+width: 100%;
+}
+.menu-toggle {
+font-size: 30px;
+cursor: pointer;
+position: absolute;
+left: 10px;
+top: 50px; /* Adjusted to move the menu toggle down */
+}
+</style>
+</head>
+<body>
+<span class="menu-toggle" onclick="toggleMenu()">&#9776;</span>
+<aside id="sidebar">
+<a href="#news">News</a>
+<a href="#blog">Blog</a>
+<a href="#links">Links</a>
+<a href="#faq">FAQ</a>
+</aside>
+<div class="content">
+<nav>
+<a href="#home">Home</a>
+<a href="#services">Services</a>
+<a href="#about">About Us</a>
+<a href="#contact">Contact</a>
+</nav>
+<h1>Selamat Datang di Halaman berita saya!</h1>
+<h1>contoh gambar google</h1>
+<img SRC="https://goodridge.com/uk-blog/james-deane/" alt="atribut ini berfungsi jika gambar tidak muncul di google,maka teks ini yang akan muncul"/>
+</body>
+</HTML>
+<p>Ikuti perkembangan berita terbaru saya!</p>
+</div>
+
+<footer>
+
+© 2024 - Universitas Yatsi Madani | Semua Hak Cipta Dilindungi
+</footer>
+<script>
+function toggleMenu() {
+var sidebar = document.getElementById('sidebar');
+var content = document.querySelector('.content');
+if (sidebar.style.width === '200px') {
+sidebar.style.width = '0';
+content.style.marginLeft = '0';
+} else {
+sidebar.style.width = '200px';
+content.style.marginLeft = '200px';
+}
+}
+</script>
+</body>
+</html>
